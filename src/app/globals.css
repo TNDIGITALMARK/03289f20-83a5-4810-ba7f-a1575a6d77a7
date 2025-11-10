@@ -1,203 +1,499 @@
 @import "tailwindcss";
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* ============================================
+   HOUSE OF ATTITUDE - DESIGN SYSTEM
+   Bold, empowering, unapologetically fierce
+   ============================================ */
+
+/* Import Fonts - Bold Impact Typography */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  /* Pure white background with crisp black text */
-  --background: 0 0% 100%;
-  --foreground: 0 0% 0%;
+  /* ========== HOUSE OF ATTITUDE COLOR SYSTEM ========== */
+  /* Deep black foundation - the canvas for boldness */
+  --background: 0 0% 4%;              /* #0a0a0a - Deep black */
+  --foreground: 0 0% 100%;            /* #ffffff - Pure white text */
 
-  /* Clean white cards with black text */
-  --card: 0 0% 100%;
-  --card-foreground: 0 0% 0%;
+  /* Electric pink - primary brand color for power and attitude */
+  --primary: 328 100% 54%;            /* #FF1493 - Electric Pink/Deep Pink */
+  --primary-foreground: 0 0% 100%;    /* White text on pink */
 
-  /* Popovers with white background */
-  --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 0%;
+  /* Fiery red - urgency, passion, strength */
+  --secondary: 348 100% 55%;          /* #DC143C - Crimson Red */
+  --secondary-foreground: 0 0% 100%;  /* White text on red */
 
-  /* Primary: Black with white text */
-  --primary: 0 0% 0%;
-  --primary-foreground: 0 0% 100%;
+  /* Metallic gold - premium, confidence, power */
+  --accent: 43 100% 50%;              /* #FFD700 - Metallic Gold */
+  --accent-foreground: 0 0% 0%;       /* Black text on gold */
 
-  /* Secondary: Light gray background with black text */
-  --secondary: 0 0% 97%;
-  --secondary-foreground: 0 0% 0%;
+  /* Dark gray cards and surfaces */
+  --card: 0 0% 10%;                   /* #1a1a1a - Dark gray cards */
+  --card-foreground: 0 0% 100%;       /* White text on cards */
 
-  /* Muted: Subtle gray with darker text */
-  --muted: 0 0% 96%;
-  --muted-foreground: 0 0% 40%;
+  /* Slightly lighter gray for hover states */
+  --muted: 0 0% 16%;                  /* #2a2a2a - Muted gray */
+  --muted-foreground: 0 0% 70%;       /* #b3b3b3 - Muted text */
 
-  /* Accent: Light gray */
-  --accent: 0 0% 96%;
-  --accent-foreground: 0 0% 0%;
-
-  /* Destructive: Clean red */
-  --destructive: 0 70% 50%;
+  /* Destructive stays red for errors */
+  --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  /* Borders: Subtle gray */
-  --border: 0 0% 90%;
-  --input: 0 0% 90%;
-  --ring: 0 0% 0%;
+  /* Borders - electric pink accent */
+  --border: 328 100% 54%;             /* Electric pink borders */
+  --input: 0 0% 16%;                  /* Dark input backgrounds */
+  --ring: 328 100% 54%;               /* Electric pink focus rings */
 
-  /* Minimal rounded corners */
-  --radius: 0.375rem;
+  /* Minimal border radius for sharp, bold aesthetic */
+  --radius: 0.25rem;                  /* 4px - sharp corners */
 
-  /* Sidebar: Clean white with black text */
-  --sidebar-background: 0 0% 100%;
-  --sidebar-foreground: 0 0% 0%;
-  --sidebar-primary: 0 0% 0%;
+  /* Popover styling */
+  --popover: 0 0% 8%;
+  --popover-foreground: 0 0% 100%;
+
+  /* Sidebar (if used) */
+  --sidebar-background: 0 0% 6%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-primary: 328 100% 54%;
   --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 0 0% 96%;
-  --sidebar-accent-foreground: 0 0% 0%;
-  --sidebar-border: 0 0% 90%;
-  --sidebar-ring: 0 0% 0%;
-}
+  --sidebar-accent: 0 0% 12%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-border: 0 0% 16%;
+  --sidebar-ring: 328 100% 54%;
 
-.dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-
-  --card: 222.2 84% 4.9%;
-  --card-foreground: 210 40% 98%;
-
-  --popover: 222.2 84% 4.9%;
-  --popover-foreground: 210 40% 98%;
-
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
-
-  --secondary: 217.2 32.6% 17.5%;
-  --secondary-foreground: 210 40% 98%;
-
-  --muted: 217.2 32.6% 17.5%;
-  --muted-foreground: 215 20.2% 65.1%;
-
-  --accent: 217.2 32.6% 17.5%;
-  --accent-foreground: 210 40% 98%;
-
-  --destructive: 0 62.8% 30.6%;
-  --destructive-foreground: 210 40% 98%;
-
-  --border: 217.2 32.6% 17.5%;
-  --input: 217.2 32.6% 17.5%;
-  --ring: 212.7 26.8% 83.9%;
-  --sidebar-background: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  /* Custom Brand Colors - Direct Access */
+  --electric-pink: #FF1493;
+  --fiery-red: #DC143C;
+  --metallic-gold: #FFD700;
+  --deep-black: #0a0a0a;
+  --dark-gray: #1a1a1a;
+  --muted-gray: #2a2a2a;
 }
 
 @theme {
   --container: 1400px;
   --container-center: true;
   --container-padding: 2rem;
-  
-  /* Color System */
+
+  /* Color System Mapping */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
-  
+
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
-  
+
   --color-secondary: hsl(var(--secondary));
   --color-secondary-foreground: hsl(var(--secondary-foreground));
-  
+
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
-  
+
   --color-muted: hsl(var(--muted));
   --color-muted-foreground: hsl(var(--muted-foreground));
-  
+
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
-  
+
   --color-popover: hsl(var(--popover));
   --color-popover-foreground: hsl(var(--popover-foreground));
-  
+
   --color-card: hsl(var(--card));
   --color-card-foreground: hsl(var(--card-foreground));
-  
-  --color-sidebar: hsl(var(--sidebar-background));
-  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
-  --color-sidebar-primary: hsl(var(--sidebar-primary));
-  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
-  --color-sidebar-accent: hsl(var(--sidebar-accent));
-  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
-  --color-sidebar-border: hsl(var(--sidebar-border));
-  --color-sidebar-ring: hsl(var(--sidebar-ring));
-  
-  /* Border Radius */
+
+  /* Border Radius - Sharp & Bold */
   --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
-  
-  /* Animations */
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-sm: 0px;  /* No radius for ultra-sharp edges */
+
+  /* Animations - Smooth but Assertive */
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-slide-in: slideIn 0.3s ease-out;
+  --animate-fade-in: fadeIn 0.4s ease-out;
 }
 
+/* ========== KEYFRAME ANIMATIONS ========== */
 @keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
 }
 
 @keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+@keyframes slideIn {
   from {
-    height: var(--radix-accordion-content-height);
+    opacity: 0;
+    transform: translateY(20px);
   }
   to {
-    height: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========== GLOBAL RESET & BASE STYLES ========== */
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
   background-color: hsl(var(--background));
   color: hsl(var(--foreground));
-  font-feature-settings: "rlig" 1, "calt" 1;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 
-/* Minimal, clean typography */
+/* ========== TYPOGRAPHY SYSTEM ========== */
+/* Headlines - Bold, Impactful, All Caps */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anton', 'Oswald', impact, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 8vw, 6rem);  /* 40px - 96px responsive */
+  letter-spacing: 0.05em;
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(2rem, 6vw, 4rem);    /* 32px - 64px responsive */
+  letter-spacing: 0.04em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* 24px - 40px responsive */
+  letter-spacing: 0.03em;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 2rem);  /* 20px - 32px responsive */
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
-  letter-spacing: -0.025em;
+}
+
+h5 {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem); /* 18px - 24px responsive */
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+/* Body Text - Clean, Readable */
+p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
   color: hsl(var(--foreground));
 }
 
-/* Clean button styles */
-button {
+/* Strong emphasis */
+strong, b {
+  font-weight: 700;
+  color: hsl(var(--primary));
+}
+
+/* Links - Fiery Red */
+a {
+  color: hsl(var(--secondary));
+  text-decoration: none;
+  transition: color 0.2s ease, opacity 0.2s ease;
   font-weight: 500;
 }
 
-/* Subtle shadows for depth */
-.shadow-sm {
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+a:hover {
+  color: hsl(var(--primary));
+  opacity: 0.9;
 }
 
-.shadow {
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+/* Navigation Links - Special Styling */
+nav a {
+  color: hsl(var(--foreground));
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
 }
 
-.shadow-md {
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+nav a:hover {
+  color: hsl(var(--primary));
+}
+
+/* ========== BUTTON SYSTEM ========== */
+button {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+/* Primary Button - Electric Pink */
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 0.875rem 2rem;
+  font-size: 0.875rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--secondary));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 20, 147, 0.3);
+}
+
+/* Secondary Button - Outlined */
+.btn-secondary {
+  background-color: transparent;
+  color: hsl(var(--primary));
+  padding: 0.875rem 2rem;
+  font-size: 0.875rem;
+  border: 2px solid hsl(var(--primary));
+  border-radius: var(--radius);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 20, 147, 0.3);
+}
+
+/* Gold Accent Button */
+.btn-accent {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+  padding: 0.875rem 2rem;
+  font-size: 0.875rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+}
+
+.btn-accent:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+/* ========== FORM ELEMENTS ========== */
+input, textarea, select {
+  background-color: hsl(var(--input));
+  color: hsl(var(--foreground));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  outline: none;
+  width: 100%;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px rgba(255, 20, 147, 0.2);
+}
+
+input::placeholder, textarea::placeholder {
+  color: hsl(var(--muted-foreground));
+  font-style: italic;
+}
+
+label {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* ========== CARD COMPONENTS ========== */
+.card {
+  background-color: hsl(var(--card));
+  color: hsl(var(--card-foreground));
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background-color: hsl(var(--muted));
+  transform: translateY(-4px);
+}
+
+/* Product Card - Special Styling */
+.product-card {
+  background-color: hsl(var(--card));
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--accent)) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover::before {
+  opacity: 1;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(255, 20, 147, 0.2);
+}
+
+/* ========== UTILITY CLASSES ========== */
+.text-gradient {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--accent)) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-gradient {
+  border-image: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(var(--secondary)) 50%,
+    hsl(var(--accent)) 100%
+  ) 1;
+}
+
+.electric-glow {
+  box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+}
+
+/* ========== SCROLLBAR STYLING ========== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--secondary));
+}
+
+/* ========== SELECTION STYLING ========== */
+::selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+::-moz-selection {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+/* ========== IMAGE STYLING ========== */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* High-contrast product images */
+.product-image {
+  filter: contrast(1.1) brightness(1.05);
+  transition: all 0.3s ease;
+}
+
+.product-image:hover {
+  filter: contrast(1.15) brightness(1.1);
+  transform: scale(1.05);
+}
+
+/* ========== RESPONSIVE UTILITIES ========== */
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1rem;
+  }
+
+  h1 { font-size: clamp(2rem, 10vw, 3rem); }
+  h2 { font-size: clamp(1.5rem, 8vw, 2.5rem); }
+  h3 { font-size: clamp(1.25rem, 6vw, 2rem); }
+
+  .btn-primary, .btn-secondary, .btn-accent {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+  }
 }

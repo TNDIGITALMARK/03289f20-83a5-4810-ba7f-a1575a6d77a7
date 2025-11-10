@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elegant Flora Boutique",
-  description: "Beautiful AI-powered website creation platform",
+  title: "House of Attitude | Wear Your Power",
+  description: "More than clothing—a movement for empowerment and self-expression. Bold streetwear for those who refuse to blend in.",
 };
 
 export default function RootLayout({
