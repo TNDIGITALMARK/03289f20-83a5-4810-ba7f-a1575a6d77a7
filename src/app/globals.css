@@ -143,10 +143,19 @@
 
 /* ========== GLOBAL RESET & BASE STYLES ========== */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   border-color: hsl(var(--border));
+}
+
+/* Selective reset - only remove default margins/padding where needed */
+body, figure, blockquote, dl, dd {
+  margin: 0;
+}
+
+/* Remove default padding from lists when using list-style: none */
+ul[role='list'], ol[role='list'] {
+  padding: 0;
+  list-style: none;
 }
 
 html {
@@ -176,7 +185,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: hsl(var(--foreground));
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 h1 {
