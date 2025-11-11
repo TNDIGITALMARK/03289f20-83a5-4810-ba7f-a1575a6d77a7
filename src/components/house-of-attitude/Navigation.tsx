@@ -22,7 +22,7 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative">
-              <h1 className="text-xl sm:text-2xl font-bold tracking-wider text-white group-hover:text-primary transition-colors duration-300">
+              <h1 className="text-base sm:text-lg font-bold tracking-wider text-white group-hover:text-primary transition-colors duration-300">
                 POWER WEAR
               </h1>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary via-secondary to-accent group-hover:w-full transition-all duration-500"></div>
