@@ -419,6 +419,17 @@ label {
 }
 
 /* ========== UTILITY CLASSES ========== */
+/* Hero Title - Proportionate sizing for header */
+.hero-title {
+  font-family: 'Anton', 'Oswald', impact, sans-serif;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);  /* 28px - 56px responsive */
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
 .text-gradient {
   background: linear-gradient(
     135deg,

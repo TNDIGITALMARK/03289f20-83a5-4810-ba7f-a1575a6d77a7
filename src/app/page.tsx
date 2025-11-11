@@ -54,7 +54,7 @@ export default function HomePage() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight text-gradient">
+            <h1 className="hero-title text-gradient">
               {heroSlogans[currentSlogan]}
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
