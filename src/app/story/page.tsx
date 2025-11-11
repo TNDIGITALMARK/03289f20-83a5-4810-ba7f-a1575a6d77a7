@@ -15,11 +15,11 @@ export default function StoryPage() {
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-background">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
             {founderStory.title}
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mb-6"></div>
-          <p className="text-xl sm:text-2xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
             {founderStory.subtitle}
           </p>
         </div>
@@ -42,10 +42,10 @@ export default function StoryPage() {
 
             {/* Story Content */}
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">THE JOURNEY</h2>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-6">THE JOURNEY</h2>
               <div className="prose prose-invert max-w-none">
                 {founderStory.story.trim().split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                  <p key={index} className="text-base text-muted-foreground leading-relaxed mb-4">
                     {paragraph.trim()}
                   </p>
                 ))}
@@ -59,7 +59,7 @@ export default function StoryPage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-card">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-4">
               {founderStory.mission.title}
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto"></div>
@@ -82,8 +82,8 @@ export default function StoryPage() {
                     <Users className="w-12 h-12 text-accent group-hover:scale-110 transition-transform" />
                   )}
                 </div>
-                <h3 className="text-xl font-bold mb-3 uppercase tracking-wide">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                <h3 className="text-lg font-bold mb-3 uppercase tracking-wide">{value.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
               </div>
             ))}
           </div>

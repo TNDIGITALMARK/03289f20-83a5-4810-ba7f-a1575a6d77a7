@@ -57,7 +57,7 @@ export default function HomePage() {
             <h1 className="hero-title text-gradient">
               {heroSlogans[currentSlogan]}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto font-light">
               More than clothing—it's a movement for empowerment and self-expression
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -85,11 +85,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               FEATURED COLLECTIONS
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mb-6"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Bold pieces for those who refuse to blend in. Shop our hero collection.
             </p>
           </div>
@@ -121,14 +121,14 @@ export default function HomePage() {
 
                 {/* Product Info */}
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <p className="text-2xl font-bold text-primary">${product.price}</p>
+                    <p className="text-xl font-bold text-primary">${product.price}</p>
                     <Link
                       href={`/shop/${product.slug}`}
                       className="text-sm text-secondary hover:text-primary font-medium transition-colors"
@@ -164,14 +164,14 @@ export default function HomePage() {
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-black mb-6 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black mb-6 leading-tight">
             YOUR STYLE.
             <br />
             <span className="text-primary">YOUR POWER.</span>
             <br />
             YOUR STORY.
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 leading-relaxed">
+          <p className="text-base sm:text-lg text-muted-foreground mb-8 leading-relaxed">
             House of Attitude isn't just about what you wear—it's about who you become when you put it on.
             It's for those who've been told they're too much, too loud, too different.
             For those who refuse to apologize for taking up space.
@@ -186,10 +186,10 @@ export default function HomePage() {
       {/* Community Hashtag Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-card to-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
             JOIN THE MOVEMENT
           </h3>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-base text-muted-foreground mb-6">
             Share your power. Tag us with <span className="text-primary font-bold">#HOUSEOFATTITUDE</span>
           </p>
           <div className="flex justify-center space-x-4 text-primary">

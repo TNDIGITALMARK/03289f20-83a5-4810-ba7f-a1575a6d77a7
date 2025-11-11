@@ -25,10 +25,10 @@ export default function Footer() {
       <div className="border-b border-primary/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gradient">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-gradient">
               JOIN THE MOVEMENT
             </h3>
-            <p className="text-muted-foreground mb-6 text-sm sm:text-base">
+            <p className="text-muted-foreground mb-6 text-sm">
               Get the attitude in your inbox. Exclusive drops, empowerment content, and community access.
             </p>
 

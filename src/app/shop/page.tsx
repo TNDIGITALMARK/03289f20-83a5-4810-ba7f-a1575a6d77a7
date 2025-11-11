@@ -25,11 +25,11 @@ export default function ShopPage() {
       {/* Shop Header */}
       <section className="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-black to-background">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-4 text-gradient">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-black mb-4 text-gradient">
             SHOP EMPOWERMENT
           </h1>
           <div className="w-32 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto mb-6"></div>
-          <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Every piece is designed for those who refuse to blend in. Find your power.
           </p>
         </div>
@@ -214,10 +214,10 @@ export default function ShopPage() {
       {/* Call to Action */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-card to-black">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl sm:text-4xl font-black mb-4">
+          <h3 className="text-2xl sm:text-3xl font-black mb-4">
             CAN'T FIND YOUR POWER?
           </h3>
-          <p className="text-lg text-muted-foreground mb-6">
+          <p className="text-base text-muted-foreground mb-6">
             Join our community and be the first to know about new drops, exclusive collections, and empowerment content.
           </p>
           <Link href="/#newsletter" className="btn-accent">
